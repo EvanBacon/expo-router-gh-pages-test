@@ -10,7 +10,13 @@
     "test": "jest --watchAll"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/$1"
+    },
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ]
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
